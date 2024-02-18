@@ -239,24 +239,22 @@ Text textAPropos(String text) {
   );
 }
 
-Container addFriend(String name, String pathImage, width) {
-  return Container(
-      child: Column(
-        children: [
-          Container(
-              width: width,
-              height: 170,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  image: DecorationImage(
-                  image: AssetImage("images/$pathImage.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
+Column addFriend(String name, String pathImage, width) {
+  return Column(
+    children: [
+      Container(
+          width: width,
+          height: 170,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              image: DecorationImage(
+              image: AssetImage("images/$pathImage.jpg"),
+              fit: BoxFit.cover,
+            ),
           ),
-          Text(name)
-        ],
       ),
+      Text(name)
+    ],
   );
 }
 
